@@ -7,7 +7,10 @@ import java.io.IOException;
 import java.util.Scanner;
 import duke.tasks.Task;
 
-
+/**
+ * Storage class to store and load users tasks inputs into Duke bot in a file with a specified filepath.
+ * @author lauralee
+ */
 public class Storage {
 
     /**
@@ -64,6 +67,12 @@ public class Storage {
         }
     }
 
+    /**
+     * Loads an existing file with a TaskList created by a user who previously used the Duke bot.
+     * @param filePath The specific filepath which the user stored their TaskList in the previous time they
+     *                 used the Duke bot.
+     * @throws FileNotFoundException
+     */
     public static void loadFile(String filePath) throws FileNotFoundException {
         TaskList taskList = new TaskList();
         File dukeFile = new File(filePath);
